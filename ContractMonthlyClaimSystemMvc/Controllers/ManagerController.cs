@@ -11,7 +11,7 @@ namespace ContractMonthlyClaimSystem.Controllers
             {
                 Pending = 5,   // Replace with DB logic
                 Approved = 10, // Replace with DB logic
-                Rejected = 2   // Replace with DB logic
+                Rejected = 2  
             };
 
             return View(model);
