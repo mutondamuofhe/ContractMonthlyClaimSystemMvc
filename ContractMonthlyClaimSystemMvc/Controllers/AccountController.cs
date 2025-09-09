@@ -44,7 +44,7 @@ namespace ContractMonthlyClaimSystem.Controllers
         {
             Users.Add(new User { Email = email, Password = password, Role = role });
 
-            // After register, go straight to login
+            // After register, go straight to login.
             return RedirectToAction("Login");
         }
     }
