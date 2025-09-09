@@ -1,0 +1,23 @@
+﻿@model ContractMonthlyClaimSystem.Models.DashboardViewModel
+
+@{
+    ViewData["Title"] = "Manager Dashboard";
+}
+<h2 class="h1">Welcome Manager</h2>
+<div class="muted">Overview of all claims</div>
+
+<div style="display:flex;gap:12px;margin-top:14px">
+    <div class="card" style="flex:1;background:#fff7fb">
+        <div class="small-muted">Pending</div>
+        <div style="font-size:28px;font-weight:700">@Model.Pending</div>
+    </div>
+    <div class="card" style="flex:1;background:#fff7fb">
+        <div class="small-muted">Approved</div>
+        <div style="font-size:28px;font-weight:700">@Model.Approved</div>
+    </div>
+    <div class="card" style="flex:1;background:#fff7fb">
+        <div class="small-muted">Rejected</div>
+        <div style="font-size:28px;font-weight:700">@Model.Rejected</div>
+    </div>
+</div>
+

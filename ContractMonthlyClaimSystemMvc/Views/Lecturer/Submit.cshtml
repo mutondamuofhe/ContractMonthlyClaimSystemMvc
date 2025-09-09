@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Submit Claim";
+}
+<h2 class="h1">Submit Claim</h2>
+<div class="muted">Provide the claim details and upload any supporting document.</div>
+
+<form method="post" enctype="multipart/form-data" asp-controller="Lecturer" asp-action="Submit" style="margin-top:12px">
+    <label>Claim Title</label>
+    <input class="input" type="text" name="title" placeholder="e.g., July Tutorial Marking" />
+
+    <label>Description</label>
+    <textarea class="input" name="description" rows="6" placeholder="Add details…"></textarea>
+
+    <label>Supporting Document</label>
+    <input type="file" name="attachment" />
+
+    <div style="margin-top:10px">
+        <button class="primary-btn" type="submit">Submit Claim</button>
+    </div>
+</form>

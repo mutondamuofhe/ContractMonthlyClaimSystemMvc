@@ -1,0 +1,17 @@
+﻿@model IEnumerable<ContractMonthlyClaimSystemMvc.Models.Claim>
+@{
+    ViewData["Title"] = "My Claims";
+}
+<h2 class="h1">Your Claims</h2>
+<table class="table" style="margin-top:12px">
+    <thead><tr><th>Title</th><th>Description</th><th>Status</th><th>Date</th><th>Attachment</th></tr></thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.Title</td>
+                <td>@c.Description</td>
+                 </tr>
+        }
+    </tbody>
+</table>

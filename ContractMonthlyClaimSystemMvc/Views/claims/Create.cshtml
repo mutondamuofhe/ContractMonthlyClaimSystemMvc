@@ -1,0 +1,22 @@
+﻿@model ContractMonthlyClaimSystemMvc.Models.Claim
+
+@{
+    ViewData["Title"] = "Submit Claim";
+}
+
+<h2 style="color:#ad1457">Submit New Claim</h2>
+
+<form asp-action="Create" asp-controller="Claims" method="post">
+    <label>Title</label>
+    <input asp-for="Title" class="input" />
+
+    <label>Description</label>
+    <textarea asp-for="Description" class="input"></textarea>
+
+    <label>Amount</label>
+    <input asp-for="Amount" type="number" step="0.01" class="input" />
+
+    <div style="margin-top:12px">
+        <button type="submit" class="primary-btn">Submit Claim</button>
+    </div>
+</form>

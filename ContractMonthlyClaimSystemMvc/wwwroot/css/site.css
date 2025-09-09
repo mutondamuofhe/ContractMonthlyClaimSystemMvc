@@ -1,0 +1,89 @@
+body {
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background: linear-gradient(180deg,#fff5f9,#fff8fb);
+    margin: 0;
+    color: #1f2937;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 28px auto;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.muted {
+    color: #6b7280;
+}
+
+.primary-btn {
+    background: linear-gradient(90deg,#e91e63,#b0006f);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.secondary-btn {
+    border: 1px solid #e91e63;
+    color: #e91e63;
+    background: transparent;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0 14px;
+    border: 1px solid #e6e6e6;
+    border-radius: 6px;
+}
+
+.left-nav {
+    width: 220px;
+    background: #fff6f9;
+    padding: 16px;
+    border-radius: 10px;
+}
+
+.nav-link {
+    display: block;
+    padding: 8px 6px;
+    color: #6b7280;
+    text-decoration: none;
+}
+
+    .nav-link.active {
+        color: #b0006f;
+        font-weight: 600;
+    }
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    .table th, .table td {
+        padding: 8px 10px;
+        border-bottom: 1px solid #f0e6ea;
+    }
+
+.small-muted {
+    color: #9ca3af;
+    font-size: 0.9rem;
+}

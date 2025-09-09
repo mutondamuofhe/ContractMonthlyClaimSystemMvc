@@ -1,0 +1,49 @@
+﻿@model ContractMonthlyClaimSystem.Models.LecturerDashboardViewModel
+
+@{
+    ViewData["Title"] = "Lecturer Dashboard";
+}
+
+<div>
+    <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>
+            <div class="h1">Welcome, </div>
+            <div class="muted">Here’s a quick summary of your claim activity.</div>
+        </div>
+    </div>
+
+    <div style="display:flex;gap:12px;margin-top:14px">
+        <div class="card" style="flex:1;background:#fff7fb">
+            <div class="small-muted">Total Claims</div>
+            <div style="font-size:28px;font-weight:700">@Model.Total</div>
+        </div>
+        <div class="card" style="flex:1;background:#fff7fb">
+            <div class="small-muted">Pending</div>
+            <div style="font-size:28px;font-weight:700">@Model.Pending</div>
+        </div>
+        <div class="card" style="flex:1;background:#fff7fb">
+            <div class="small-muted">Approved</div>
+            <div style="font-size:28px;font-weight:700">@Model.Approved</div>
+        </div>
+    </div>
+
+    <div style="margin-top:20px">
+        <div class="small-muted">Recent Claims</div>
+        <table class="table" style="margin-top:8px">
+            <thead>
+                <tr><th>Title</th><th>Description</th><th>Status</th><th>Date</th></tr>
+            </thead>
+            <tbody>
+                @foreach (var c in Model.Recent)
+                {
+                    <tr>
+                        <td>@c.Title</td>
+                        <td>@c.Description</td>
+                        <td>@c.Status</td>
+                        <td>@c.DateSubmitted.ToLocalTime().ToString("yyyy-MM-dd")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

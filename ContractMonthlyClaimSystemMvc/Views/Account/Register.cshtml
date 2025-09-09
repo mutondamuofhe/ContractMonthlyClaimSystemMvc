@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Sign Up";
+}
+
+<div style="max-width:520px;margin:0 auto;text-align:center;padding-top:60px">
+    <h1 class="h1" style="margin-bottom:6px;color:#ad1457">Contract Monthly Claim System</h1>
+    <div class="muted">Create an account to get started</div>
+
+    <form method="post" asp-controller="Account" asp-action="Register" style="margin-top:18px;text-align:left">
+        <label>Email</label>
+        <input class="input" type="email" name="email" placeholder="Enter your email" style="width:100%;margin-bottom:12px;padding:10px;border-radius:6px;border:1px solid #ccc" />
+
+        <label>Password</label>
+        <input class="input" type="password" name="password" placeholder="Enter your password" style="width:100%;margin-bottom:12px;padding:10px;border-radius:6px;border:1px solid #ccc" />
+
+        <label>Role</label>
+        <select name="role" class="input" style="width:100%;margin-bottom:18px;padding:10px;border-radius:6px;border:1px solid #ccc">
+            <option value="Lecturer">Lecturer</option>
+            <option value="Manager">Manager</option>
+        </select>
+
+        <div style="text-align:center;margin-top:8px">
+            <button class="primary-btn" type="submit"
+                    style="padding:10px 20px;border:none;border-radius:6px;background:#ad1457;color:white;font-weight:bold;cursor:pointer">
+                Sign Up
+            </button>
+        </div>
+
+        <div style="text-align:center;margin-top:12px" class="muted">
+            Already have an account?
+            <a asp-controller="Account" asp-action="Login" style="color:#ad1457;font-weight:bold">Login here</a>
+        </div>
+    </form>
+</div>

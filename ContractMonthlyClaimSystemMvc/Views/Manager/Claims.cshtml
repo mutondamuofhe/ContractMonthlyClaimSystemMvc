@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ContractMonthlyClaimSystemMvc.Models.Claim>
+@{
+    ViewData["Title"] = "Manage Claims";
+}
+<h2 class="h1">Manage Claims</h2>
+
+<table class="table" style="margin-top:12px">
+    <thead><tr><th>Title</th><th>Lecturer</th><th>Status</th><th>Date</th><th>Attachment</th><th>Actions</th></tr></thead>
+    <tbody>
+        @foreach (var c in Model)
+        {
+            <tr>
+                <td>@c.Title</td>
+                <td>@c.SubmittedBy</td>
+                <td>@c.Status</td>
+              <td>
+                    <form method="post" asp-controller="Manager" asp-action="Approve" style="display:inline">
+                        <input type="hidden" name="id" value="@c.Id" />
+                        <button class="secondary-btn" type="submit">Approve</button>
+                    </form>
+                    <form method="post" asp-controller="Manager" asp-action="Reject" style="display:inline;margin-left:6px">
+                        <input type="hidden" name="id" value="@c.Id" />
+                        <button class="secondary-btn" type="submit">Reject</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
